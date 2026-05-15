@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fancy Moving Button</title>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            background: linear-gradient(to right, #141e30, #243b55);
+            font-family: Arial;
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            padding-top: 30px;
+            font-size: 40px;
+        }
+
+        #moveButton {
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            padding: 18px 35px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Catch me nigger</h1>
+
+    <button id="moveButton">
+        Catch Me 😄
+    </button>
+
+    <script>
+
+        const button = document.getElementById("moveButton");
+
+        function moveButton() {
+
+            const newTop = Math.floor(Math.random() * 500);
+
+            const newLeft = Math.floor(Math.random() * 1000);
+
+            button.style.top = newTop + "px";
+
+            button.style.left = newLeft + "px";
+        }
+
+        button.addEventListener("mouseover", moveButton);
+
+        button.addEventListener("click", function () {
+            alert("You Clicked Me!");
+        });
+
+    </script>
+
+</body>
+
+</html>
